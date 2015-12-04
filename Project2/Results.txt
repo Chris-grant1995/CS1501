@@ -1,0 +1,226 @@
+Results.txt
+
+LZW.java
+	all.tar
+		Original Size: 3 MB
+		Compressed Size: 1.8 MB
+	assig2.doc
+		Original Size: 87 KB
+		Compressed Size: 75 KB
+	bmps.tar
+		Original Size: 1.1 MB
+		Compressed Size: 925 KB
+	code.txt
+		Original Size: 72 KB
+		Compressed Size: 31 KB
+	code2.txt
+		Original Size: 58 KB
+		Compressed Size: 24 KB
+	edit.exe
+		Original Size: 236 KB
+		Compressed Size: 251 KB
+	frosty.jpg
+		Original Size: 127 KB
+		Compressed Size: 177 KB
+	gone_fishing.bmp
+		Original Size: 17 KB
+		Compressed Size: 9 KB
+	large.txt
+		Original Size: 1.2 MB
+		Compressed Size: 605 KB
+	Lego-big.gif
+		Original Size: 93 KB
+		Compressed Size: 129 KB
+	medium.txt
+		Original Size: 25 KB
+		Compressed Size: 13 KB
+	texts.tar
+		Original Size: 1.4 MB
+		Compressed Size: 1 MB
+	wacky.bmp
+		Original Size: 922 KB
+		Compressed Size: 4 KB
+	winnt256.bmp
+		Original Size: 157 KB
+		Compressed Size: 159 KB
+
+
+
+MyLZW.java n
+	all.tar
+		Original Size: 3 MB
+		Compressed Size: 1.8 MB
+	assig2.doc
+		Original Size: 87 KB
+		Compressed Size: 40 KB
+	bmps.tar
+		Original Size: 1.1 MB
+		Compressed Size: 81 KB
+	code.txt
+		Original Size: 72 KB
+		Compressed Size: 25 KB
+	code2.txt
+		Original Size: 58 KB
+		Compressed Size: 21 KB
+	edit.exe
+		Original Size: 236 KB
+		Compressed Size: 156 KB
+	frosty.jpg
+		Original Size: 127 KB
+		Compressed Size: 164 KB
+	gone_fishing.bmp
+		Original Size: 17 KB
+		Compressed Size: 9 KB
+	large.txt
+		Original Size: 1.2 MB
+		Compressed Size: 502 KB
+	Lego-big.gif
+		Original Size: 93 KB
+		Compressed Size: 122 KB
+	medium.txt
+		Original Size: 25 KB
+		Compressed Size: 13 KB
+	texts.tar
+		Original Size: 1.4 MB
+		Compressed Size: 598 KB
+	wacky.bmp
+		Original Size: 922 KB
+		Compressed Size: 4 KB
+	winnt256.bmp
+		Original Size: 157 KB
+		Compressed Size: 63 KB
+
+
+MyLZW.java r
+	all.tar
+		Original Size: 3 MB
+		Compressed Size: 1.2 MB
+	assig2.doc
+		Original Size: 87 KB
+		Compressed Size: 40 KB
+	bmps.tar
+		Original Size: 1.1 MB
+		Compressed Size: 81 KB
+	code.txt
+		Original Size: 72 KB
+		Compressed Size: 25 KB
+	code2.txt
+		Original Size: 58 KB
+		Compressed Size: 21 KB
+	edit.exe
+		Original Size: 236 KB
+		Compressed Size: 152 KB
+	frosty.jpg
+		Original Size: 127 KB
+		Compressed Size: 171 KB
+	gone_fishing.bmp
+		Original Size: 17 KB
+		Compressed Size: 9 KB
+	large.txt
+		Original Size: 1.2 MB
+		Compressed Size: 527 KB
+	Lego-big.gif
+		Original Size: 93 KB
+		Compressed Size: 122 KB
+	medium.txt
+		Original Size: 25 KB
+		Compressed Size: 13 KB
+	texts.tar
+		Original Size: 1.4 MB
+		Compressed Size: 590 KB
+	wacky.bmp
+		Original Size: 922 KB
+		Compressed Size: 4 KB
+	winnt256.bmp
+		Original Size: 157 KB
+		Compressed Size: 63 KB
+
+
+MyLZW.java m
+	all.tar
+		Original Size: 3 MB
+		Compressed Size: 2.3 MB
+	assig2.doc
+		Original Size: 87 KB
+		Compressed Size: 40 KB
+	bmps.tar
+		Original Size: 1.1 MB
+		Compressed Size: 81 KB
+	code.txt
+		Original Size: 72 KB
+		Compressed Size: 25 KB
+	code2.txt
+		Original Size: 58 KB
+		Compressed Size: 21 KB
+	edit.exe
+		Original Size: 236 KB
+		Compressed Size: 152 KB
+	frosty.jpg
+		Original Size: 127 KB
+		Compressed Size: 171 KB
+	gone_fishing.bmp
+		Original Size: 17 KB
+		Compressed Size: 9 KB
+	large.txt
+		Original Size: 1.2 MB
+		Compressed Size: 502 KB
+	Lego-big.gif
+		Original Size: 93 KB
+		Compressed Size: 122 KB
+	medium.txt
+		Original Size: 25 KB
+		Compressed Size: 13 KB
+	texts.tar
+		Original Size: 1.4 MB
+		Compressed Size: 574 KB
+	wacky.bmp
+		Original Size: 922 KB
+		Compressed Size: 4 KB
+	winnt256.bmp
+		Original Size: 157 KB
+		Compressed Size: 63 KB
+
+
+GZip
+	all.tar
+		Original Size: 3 MB
+		Compressed Size: 969 KB
+	assig2.doc
+		Original Size: 87 KB
+		Compressed Size: 23 KB
+	bmps.tar
+		Original Size: 1.1 MB
+		Compressed Size: 64 KB
+	code.txt
+		Original Size: 72 KB
+		Compressed Size: 15 KB
+	code2.txt
+		Original Size: 58 KB
+		Compressed Size: 13 KB
+	edit.exe
+		Original Size: 236 KB
+		Compressed Size: 127 KB
+	frosty.jpg
+		Original Size: 127 KB
+		Compressed Size: 127 KB
+	gone_fishing.bmp
+		Original Size: 17 KB
+		Compressed Size: 9 KB
+	large.txt
+		Original Size: 1.2 MB
+		Compressed Size: 493 KB
+	Lego-big.gif
+		Original Size: 93 KB
+		Compressed Size: 92 KB
+	medium.txt
+		Original Size: 25 KB
+		Compressed Size: 11 KB
+	texts.tar
+		Original Size: 1.4 MB
+		Compressed Size: 533 KB
+	wacky.bmp
+		Original Size: 922 KB
+		Compressed Size: 3 KB
+	winnt256.bmp
+		Original Size: 157 KB
+		Compressed Size: 50 KB
