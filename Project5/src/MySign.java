@@ -25,6 +25,7 @@ public class MySign {
         }
     }
     public static void s(String file)throws FileNotFoundException, NoSuchAlgorithmException, IOException{
+        System.out.println("Signing File " + file);
         File f = new File(file);
         Scanner s = new Scanner(f);
         ArrayList<String> fileLines = new ArrayList<>();
@@ -37,25 +38,32 @@ public class MySign {
         }
         MessageDigest m = MessageDigest.getInstance("SHA-256");
 
-        BigInteger hash = new BigInteger(m.digest(fileString.getBytes()));
-        System.out.println(hash);
-        File priv = new File("privkey.rsa");
-        s = new Scanner(priv);
-        BigInteger d = new BigInteger(s.nextLine());
-        BigInteger n = new BigInteger(s.nextLine());
+        BigInteger hash = new BigInteger(m.digest(fileString.getBytes())).abs();
+        //System.out.println("Hash: "+hash);
+        try {
+            File priv = new File("privkey.rsa");
+            s = new Scanner(priv);
+            BigInteger d = new BigInteger(s.nextLine());
+            BigInteger n = new BigInteger(s.nextLine());
 
-        BigInteger decrpyt = hash.modPow(d,n);
-        System.out.println(decrpyt);
+            BigInteger decrpyt = hash.modPow(d, n);
+            //System.out.println("Decrypted Value: " + decrpyt);
 
 
-        FileWriter writer = new FileWriter(file+".signed");
-        writer.write(decrpyt + "\n");
-        for(String line: fileLines){
-            writer.write(line + "\n");
+            FileWriter writer = new FileWriter(file + ".signed");
+            writer.write(decrpyt + "\n");
+            for (String line : fileLines) {
+                writer.write(line + "\n");
+            }
+            writer.close();
+            System.out.println("File Signature Saved to " +file + ".signed" );
+        }catch (FileNotFoundException e){
+            System.out.println("privkey.rsa not found.");
+            return;
         }
-        writer.close();
     }
     public static void v(String file) throws FileNotFoundException, NoSuchAlgorithmException{
+        System.out.println("Verifying  File " + file);
         File f = new File(file);
         Scanner s = new Scanner(f);
         ArrayList<String> fileLines = new ArrayList<>();
@@ -68,23 +76,35 @@ public class MySign {
         }
         MessageDigest m = MessageDigest.getInstance("SHA-256");
 
-        BigInteger hash = new BigInteger(m.digest(fileString.getBytes()));
-        System.out.println(hash);
-        File pub = new File("pubkey.rsa");
-        Scanner scan = new Scanner(pub);
-        String s1 = scan.nextLine();
-        //System.out.println(s1);
-        String s2 = scan.nextLine();
+        BigInteger hash = new BigInteger(m.digest(fileString.getBytes())).abs();
+        //System.out.println("Hash Value: " + hash);
+        try{
+            File pub = new File("pubkey.rsa");
+            Scanner scan = new Scanner(pub);
+            String s1 = scan.nextLine();
+            String s2 = scan.nextLine();
 
-        //System.out.println(s2);
-        BigInteger e = new BigInteger(s1);
-        BigInteger n = new BigInteger(s2);
+            //System.out.println(s2);
+            BigInteger e = new BigInteger(s1);
+            BigInteger n = new BigInteger(s2);
 
-        BigInteger encrpt = hash.modPow(e,n);
+            BigInteger encrypted = decrypted.modPow(e, n);
+            //System.out.println("Encrypted Value: " + encrypted);
+
+            boolean equals = hash.equals(encrypted);
+            if(equals){
+                System.out.println("Signature Valid");
+            }
+            else{
+                System.out.println("Signature Invalid");
+            }
 
 
-        System.out.println(encrpt);
-        System.out.println(encrpt.equals(decrypted));
+        }catch (FileNotFoundException e){
+            System.out.println("pubkey.rsa not found.");
+            return;
+        }
+
 
 
 

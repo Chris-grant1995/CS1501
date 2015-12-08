@@ -16,23 +16,28 @@ public class MyKeyGen {
 
         BigInteger n = p.multiply(q);
 
-        BigInteger phi = p.subtract(new BigInteger("1")).multiply(q.subtract(new BigInteger("1")));
+        BigInteger pminus1 = p.subtract(new BigInteger("1"));
+        BigInteger qminus1 = q.subtract(new BigInteger("1"));
+
+        BigInteger phi = qminus1.multiply(pminus1);
+
+
 
         BigInteger e =  new BigInteger(1024,1,new Random());
 
-        while(phi.compareTo(e) !=1 && phi.gcd(e).equals(new BigInteger("1"))){
+        while(phi.compareTo(e) !=1 || !phi.gcd(e).equals(new BigInteger("1"))){
             e =  new BigInteger(1024,1,new Random());
         }
+        //System.out.println(phi.gcd(e));
 
-        BigInteger d = phi.divide(e);
-        d = e.modPow(new BigInteger("-1"),phi);
-        System.out.println("Public key");
-        System.out.println(e);
-        System.out.println(n);
+        BigInteger d = e.modInverse(phi);
+        //System.out.println("Public key");
+        //System.out.println(e);
+        //System.out.println(n);
 
-        System.out.println("Private key");
-        System.out.println(d);
-        System.out.println(n);
+        //System.out.println("Private key");
+        //System.out.println(d);
+        //System.out.println(n);
 
         FileWriter writer = new FileWriter("pubkey.rsa");
         writer.write(e.toString() + "\n");
@@ -44,6 +49,8 @@ public class MyKeyGen {
         writer.write(n.toString());
         writer.close();
 
+        System.out.println("Public Key Saved to pubkey.rsa");
+        System.out.println("Private Key Saved to privkey.rsa");
        /* MessageDigest m = MessageDigest.getInstance("SHA-256");
         byte [] b = m.digest("Hello".getBytes());
         BigInteger hash = new BigInteger(b);
